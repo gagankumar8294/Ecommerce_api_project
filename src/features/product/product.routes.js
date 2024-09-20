@@ -13,6 +13,7 @@ const productController = new ProductController();
 // All the paths to controller methods.
 // localhost/api/products
 ProductRouter.get("/", productController.getAllProducts);
+ProductRouter.get('/:id', productController.getOneProduct);
 ProductRouter.post("/", upload.single('imageUrl'), productController.addProduct);
 
 export default ProductRouter;
